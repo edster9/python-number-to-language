@@ -11,6 +11,10 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'number_to_language.settings')
+# read the ENV variable from shell
+environment = os.environ.get('ENV', 'local')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      f'number_to_language.settings.{environment}')
 
 application = get_wsgi_application()
