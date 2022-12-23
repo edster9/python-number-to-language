@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from api.utils import number_to_english, number_to_spanish
 
 
+# helper function for retrieving the 'number' param from the request (get/post)
 def number_from_request(request: Request) -> int:
     number = None
 
@@ -36,6 +37,7 @@ def number_from_request(request: Request) -> int:
     return int(number)
 
 
+# '/num_to_english' endpoint
 @api_view(['GET', 'POST'])
 def num_to_english(request: Request):
     try:
@@ -47,6 +49,7 @@ def num_to_english(request: Request):
         return Response({'status': 'error', 'error': str(e)})
 
 
+# '/num_to_spanish' endpoint
 @api_view(['GET', 'POST'])
 def num_to_spanish(request: Request):
     try:
