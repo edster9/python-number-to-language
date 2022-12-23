@@ -1,5 +1,6 @@
 # environment
 /env
+secret_key.txt
 
 # Django #
 *.log
