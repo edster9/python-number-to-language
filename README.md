@@ -17,10 +17,10 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-### Modular envionrment support
-Each run-time enviornment settings file can be found in the `/number_to_langue/settings` folder. All settings derive from `base.py`
+### Modular environment support
+Each run-time environment settings file can be found in the `/number_to_langue/settings` folder. All settings derive from `base.py`
 
-Set the enviornment variable `ENV` to respective settings name to run accordingly.
+Set the environment variable `ENV` to respective settings name to run accordingly.
 
 Example for local (default)
 ``` bash
@@ -35,8 +35,8 @@ ENV=[production] python manage.py runserver
 ### Testing the API
 
 #### Endpoints
-[GET|POST] /num_to_english
-[GET|POST] /num_to_spanish
+- [GET|POST] /num_to_english
+- [GET|POST] /num_to_spanish
 
 #### Using POST (english)
 ``` bash
