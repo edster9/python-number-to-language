@@ -28,11 +28,11 @@ ENV=[local] python manage.py runserver
 ```
 
 Example for production
-```` bash
+``` bash
 ENV=[production] python manage.py runserver
 ```
 
-### Test the API
+### Testing the API
 
 #### Endpoints
 [GET|POST] /num_to_english
