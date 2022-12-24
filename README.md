@@ -20,16 +20,16 @@ python manage.py runserver
 ### Modular environment support
 Each run-time environment settings file can be found in the `/number_to_langue/settings` folder. All settings derive from `base.py`
 
-Set the environment variable `ENV` to respective settings name to run accordingly.
+Set the environment variable `ENV` to respective settings name to run accordingly. `ENV=[enviorenment] python manage.py runserver`
 
 Example for local (default)
 ``` bash
-ENV=[local] python manage.py runserver
+ENV=local python manage.py runserver
 ```
 
 Example for production
 ``` bash
-ENV=[production] python manage.py runserver
+ENV=production python manage.py runserver
 ```
 
 ### Testing the API
