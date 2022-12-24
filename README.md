@@ -62,3 +62,17 @@ Response:
 ``` bash
 {"status":"ok","num_in_spanish":"uno ciento veinte y tres"}
 ```
+
+#### Error Handling
+The API will return a `status` field with every response `OK` or `ERROR` with error details if applicable
+
+Example: (malformed number)
+``` bash
+curl --location --request GET 'localhost:8000/num_to_spanish?number=1two_three' \
+--header 'Content-Type: application/json'
+```
+
+Response:
+``` bash
+{"status":"error","error":"invalid parameter supplied - number=1two_three - must be a valid integer"}
+```
