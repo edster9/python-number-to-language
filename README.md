@@ -23,7 +23,7 @@ Each run-time enviornment settings file can be found in the `/number_to_langue/s
 Set the enviornment variable `ENV` to respective settings name to run accordingly.
 
 Example for local (default)
-```` bash
+``` bash
 ENV=[local] python manage.py runserver
 ```
 
