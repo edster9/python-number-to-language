@@ -11,17 +11,37 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### Run with local server settings
-python manage.py runserver
 
-### Run with custom environment server settings 
-ENV=[enviornment] python manage.py runserver --insecure
+### Run with local server settings
+``` bash
+python manage.py runserver
+```
+
+### Modular envionrment support
+Each run-time enviornment settings file can be found in the `/number_to_langue/settings` folder. All settings derive from `base.py`
+
+Set the enviornment variable `ENV` to respective settings name to run accordingly.
+
+Example for local (default)
+```` bash
+ENV=[local] python manage.py runserver
+```
+
+Example for production
+```` bash
+ENV=[production] python manage.py runserver
+```
 
 ### Test the API
 
-#### Using POST
+#### Endpoints
+[GET|POST] /num_to_english
+[GET|POST] /num_to_spanish
+
+#### Using POST (english)
 ``` bash
-curl --location --request POST 'localhost:8000/num_to_english' --header 'Content-Type: application/json' \
+curl --location --request POST 'localhost:8000/num_to_english' \
+--header 'Content-Type: application/json' \
 --data-raw '{
     "number": 123
 }'
@@ -32,13 +52,13 @@ Response:
 {"status":"ok","num_in_english":"one hundred and twenty-three"}
 ```
 
-#### Using GET
+#### Using GET (spanish)
 ``` bash
-curl --location --request GET 'localhost:8000/num_to_english?number=123' --header 'Content-Type: application/json'
-{"status":"ok","num_in_english":"one hundred and twenty-three"}
+curl --location --request GET 'localhost:8000/num_to_spanish?number=123' \
+--header 'Content-Type: application/json'
 ```
 
 Response:
 ``` bash
-{"status":"ok","num_in_english":"one hundred and twenty-three"}
+{"status":"ok","num_in_spanish":"uno ciento veinte y tres"}
 ```
