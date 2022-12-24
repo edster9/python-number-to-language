@@ -1,5 +1,5 @@
 # python-number-to-language
-A python API for converting integer numbers to English or Spanish text.
+A python API using Django framework for converting integer numbers to English or Spanish text.
 
 ### Install using Python virtual environment
 
