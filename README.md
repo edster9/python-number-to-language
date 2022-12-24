@@ -68,7 +68,7 @@ The API will return a `status` field with every response `OK` or `ERROR` with er
 
 Example: (malformed number)
 ``` bash
-curl --location --request GET 'localhost:8000/num_to_spanish?number=1two_three' \
+curl --location --request GET 'localhost:8000/num_to_english?number=1two_three' \
 --header 'Content-Type: application/json'
 ```
 
